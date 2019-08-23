@@ -17,9 +17,8 @@ spec:
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-          - weight: 1
-            preference:
-              matchExpressions:
+            nodeSelectorTerms:
+            - matchExpressions:
               - key: iperf-server
                 operator: In
                 values:
