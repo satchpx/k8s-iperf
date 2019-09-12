@@ -34,6 +34,7 @@ execute() {
 # main()
 setup
 echo "[INFO]: Waiting for clients to start..."
+# @TODO: Add a poll instead of a sleep here!!!
 sleep 30
 execute
 cleanup
