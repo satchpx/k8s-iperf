@@ -12,7 +12,9 @@ setup() {
         sleep 5
     done
 
-    echo "[INFO]: Server is running"
+    SERVER=$(kubectl get pod -l app=iperf-server -o name | xargs kubectl get -o jsonpath='{.status.hostIP}')
+
+    echo "[INFO]: Server is running on ${SERVER}"
 }
 
 execute() {
